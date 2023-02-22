@@ -1,22 +1,15 @@
-﻿namespace blackjack;
-
+namespace blackjack;
 public class Program
 {
-
 public static void Main()
 {
     ProgramStart();
-
-
-
 
     void ProgramStart()
     {
         Console.WriteLine("To start a game, type 'play', for information on this program type 'info'.");
         ProgramIdle();
     }
-
-   
 
     void ProgramIdle()
     {
@@ -54,16 +47,11 @@ public static void Main()
     void StartGame()
     {
         Game Game = new Game();
+        ProgramIdle();
     }
 
     void ProgramTerminate() {/*ends program*/}
     
-
-
-
-
-
-
     //Method for each game state
 
     //ProgramStart()
