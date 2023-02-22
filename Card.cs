@@ -1,17 +1,17 @@
 namespace blackjack;
-
 public class Card
 {
     public int rawIndex;
     public string suit;
     public string type;
     public string name;
-    public char value;
+    public string value;
     public Card(int x)
     {
         rawIndex = x;
 
         int rawSuit = 1;
+
         while (rawIndex > 13)
         {
             rawSuit++;
@@ -39,31 +39,31 @@ public class Card
 
         switch (rawType)
         {
-            case 1:     value = 'A';    type = "Ace";
+            case 1:     value = "A";    type = "Ace";
                 break;
-            case 2:     value = '2';    type = "Two";
+            case 2:     value = "2";    type = "Two";
                 break;
-            case 3:     value = '3';    type = "Three";
+            case 3:     value = "3";    type = "Three";
                 break;
-            case 4:     value = '4';    type = "Four";
+            case 4:     value = "4";    type = "Four";
                 break;
-            case 5:     value = '5';    type = "Five";
+            case 5:     value = "5";    type = "Five";
                 break;
-            case 6:     value = '6';    type = "Six";
+            case 6:     value = "6";    type = "Six";
                 break;
-            case 7:     value = '7';    type = "Seven";
+            case 7:     value = "7";    type = "Seven";
                 break;
-            case 8:     value = '8';    type = "Eight";
+            case 8:     value = "8";    type = "Eight";
                 break;
-            case 9:     value = '9';    type = "Nine";
+            case 9:     value = "9";    type = "Nine";
                 break;
-            case 10:     value = '0';    type = "Ten";
+            case 10:     value = "10";    type = "Ten";
                 break;
-            case 11:     value = '0';    type = "Jack";
+            case 11:     value = "10";    type = "Jack";
                 break;
-            case 12:     value = '0';    type = "Queen";
+            case 12:     value = "10";    type = "Queen";
                 break;
-            case 13:     value = '0';    type = "King";
+            case 13:     value = "10";    type = "King";
                 break;
             default:    Console.WriteLine("Error, switch type defaulted.");
                 break;
@@ -71,5 +71,4 @@ public class Card
 
         name = type + " of " + suit + ".";
     }
-
 }
